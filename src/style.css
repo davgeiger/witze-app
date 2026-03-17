@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Scribble&display=swap");
+/* || Reset */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* || General */
+.app {
+  background-color: hsl(0, 0%, 20%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app__title {
+  font-family: "Rubik Scribble";
+  color: hsl(120, 90%, 50%);
+}
+
+.joke {
+  font-size: 1.5rem;
+  background-color: hsl(0, 0%, 30%);
+  padding: 20px;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.joke__actions {
+  display: flex;
+  gap: 1.5rem;
+  height: 30px;
+}
+.joke__btn {
+  font-size: 1.2rem;
+  width: 170px;
+  text-wrap: nowrap;
+  padding: 5px 10px;
+  background-color: hsl(120, 90%, 50%);
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.joke__btn--inverted {
+  background-color: transparent;
+  border: 1px solid hsl(120, 90%, 50%);
+  display: flex;
+  gap: 0.3rem;
+}
+
+.saved-jokes {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.saved-jokes__title {
+  color: hsl(120, 90%, 50%);
+  font-family: "Rubik Scribble";
+}
+
+.saved-joke {
+  background-color: hsl(0, 0%, 30%);
+  width: 85%;
+  height: 50px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.saved-joke__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
