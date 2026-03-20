@@ -10,6 +10,7 @@
     "sass": "sass --watch src:src"
   },
   "devDependencies": {
+    "sass-embedded": "^1.98.0",
     "scss": "^0.2.4",
     "vite": "^7.3.1"
   }
