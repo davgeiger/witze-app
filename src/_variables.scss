@@ -4,6 +4,8 @@ $color-body: hsl(0, 0%, 20%);
 
 $color-joke: hsl(0, 0%, 30%);
 
+$color-text: hsl(0, 0%, 85%);
+
 @mixin tablet-and-above() {
   @media only screen and (min-width: 600px) {
     @content;

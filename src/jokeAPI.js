@@ -58,6 +58,11 @@ function displayJokes() {
   clearDisplay();
 
   let jokes = getJokes();
+
+  if (jokes.length === 0) {
+    savedJokesEl.textContent = "Keine Witze gespeichert.";
+  }
+
   jokes.forEach((joke) => {
     const jokeDisplay = document.createElement("div");
     jokeDisplay.classList.add("saved-joke");
@@ -101,6 +106,7 @@ function deleteJoke(event) {
   });
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(filteredJokes));
+  displayJokes();
 }
 
 function getNextId() {
