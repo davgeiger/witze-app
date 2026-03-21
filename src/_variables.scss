@@ -1,8 +1,10 @@
 $color-primary: hsl(120, 90%, 50%);
 
 $color-body: hsl(0, 0%, 20%);
+$color-body-light: hsl(0, 0%, 60%);
 
 $color-joke: hsl(0, 0%, 30%);
+$color-joke-light: hsl(0, 0%, 70%);
 
 $color-text: hsl(0, 0%, 85%);
 
@@ -10,4 +12,7 @@ $color-text: hsl(0, 0%, 85%);
   @media only screen and (min-width: 600px) {
     @content;
   }
+}
+
+@mixin light() {
 }
