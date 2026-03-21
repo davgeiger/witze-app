@@ -1,23 +1,41 @@
 document.addEventListener("DOMContentLoaded", displayJokes);
+document.addEventListener("DOMContentLoaded", getCategories);
 
 const STORAGE_KEY = "jokes";
+const API_JOKE = "https://witzapi.de/api/joke";
+const API_CATEGORIES = "https://witzapi.de/api/category/";
+
 let jokes = [];
 
 const currentJokeEl = document.querySelector(".joke__current-joke");
+const categoryEl = document.getElementById("category");
+
 const defaultText = "Klicke auf Neuen Witz laden, um einen Witz anzuzeigen.";
 
 const savedJokesEl = document.querySelector(".saved-jokes");
 
 async function getJoke() {
   try {
-    const response = await fetch("https://witzapi.de/api/joke");
+    const selectedCategory = categoryEl.value;
+    const query = `/?category=${selectedCategory}`;
+    const response = await fetch(API_JOKE + query);
     const json = await response.json();
-
     return json[0];
   } catch (error) {
     console.log(error);
   }
 }
+
+async function getCategories() {
+  try {
+    const response = await fetch(API_CATEGORIES);
+    const json = await response.json();
+    populateCategories(json);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 function getJokes() {
   jokes = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
   return jokes;
@@ -107,6 +125,14 @@ function deleteJoke(event) {
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(filteredJokes));
   displayJokes();
+}
+
+async function populateCategories(json) {
+  json.forEach((category) => {
+    let option = document.createElement("option");
+    option.text = category.name;
+    categoryEl.add(option);
+  });
 }
 
 function getNextId() {
