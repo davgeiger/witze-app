@@ -79,6 +79,8 @@ function displayJokes() {
 
   if (jokes.length === 0) {
     savedJokesEl.textContent = "Keine Witze gespeichert.";
+  } else {
+    savedJokesEl.textContent = "";
   }
 
   jokes.forEach((joke) => {
