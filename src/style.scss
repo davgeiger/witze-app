@@ -35,7 +35,7 @@ body {
   font-size: 1.5rem;
   background-color: $color-joke;
   width: 95%;
-  padding-left: 0.2rem;
+  padding: 0.7rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,6 +63,10 @@ body {
   &__categories {
     width: 100%;
     height: 2rem;
+    border: none;
+    border-radius: 5px;
+    background-color: $color-body;
+    color: $color-text;
   }
 
   &__actions {
@@ -80,6 +84,9 @@ body {
   &__btnSave {
     font-size: 1.3rem;
     min-width: 200px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
     text-wrap: nowrap;
 
     background-color: $color-primary;
@@ -139,7 +146,7 @@ body {
 .saved-joke {
   background-color: $color-joke;
   width: 100%;
-  padding-left: 0.2rem;
+  padding-left: 0.7rem;
 
   display: flex;
   align-items: center;
@@ -158,6 +165,8 @@ body {
     align-items: center;
     min-width: 35px;
     min-height: 35px;
+    border: none;
+    border-radius: 5px;
     background-color: red;
     margin-right: 1rem;
   }
@@ -166,6 +175,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
   }
 }
 
@@ -174,10 +184,13 @@ body {
   top: 1rem;
   right: 1rem;
   width: 3rem;
+  padding: 0.5rem;
+  border-radius: 8px;
 }
 
 .dark-background {
   background-color: $color-body;
+  color: white;
 }
 
 .app-light {
@@ -186,6 +199,11 @@ body {
 
 .joke-light {
   background-color: $color-joke-light;
+}
+
+.categories-light {
+  background-color: $color-categories-light;
+  color: black;
 }
 
 .saved-joke-light {

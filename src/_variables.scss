@@ -8,11 +8,10 @@ $color-joke-light: hsl(0, 0%, 70%);
 
 $color-text: hsl(0, 0%, 85%);
 
+$color-categories-light: hsl(0, 0%, 80%);
+
 @mixin tablet-and-above() {
   @media only screen and (min-width: 600px) {
     @content;
   }
-}
-
-@mixin light() {
 }
